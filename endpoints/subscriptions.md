@@ -5,6 +5,7 @@ Endpoints:
 
 - [Get subscriptions](#get-subscriptions)
 - [Get a subscription](#get-a-subscription)
+- [Cancel a subscription](#cancel-a-subscription)
 
 Get subscriptions
 -----------------
@@ -78,3 +79,31 @@ Get a subscription
   }
 }
 ``` 
+
+Cancel a subscription
+---------------------
+
+* `POST /subscription/29281116/cancel`
+
+##### Example JSON Response
+
+A cancelled subscription has a `null` value for `renews_at` and the `status: cancelled`
+
+```json
+{
+  "status": 200,
+  "success": true,
+  "data": {
+    "id": 70212202,
+    "customer_id": 452512733,
+    "price": 59900,
+    "vat": 2500,
+    "currency": "sek",
+    "renews_at": null,
+    "ends_at": "2020-02-17T13:35:14+00:00",
+    "reference_id": null,
+    "reference_name": null,
+    "status": "cancelled"
+  }
+}
+```
