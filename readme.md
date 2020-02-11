@@ -39,6 +39,7 @@ Endpoints
 Webhooks
 --------
  
-- [subscription.created](webhooks/subscription.md#subscriptioncreated)
-- [subscription.renewed](webhooks/subscription.md#subscriptionrenewed)
-- [subscription.cancelled](webhooks/subscription.md#subscriptioncancelled)
+- [subscription.created](webhooks/webhooks.md#subscriptioncreated)
+- [subscription.renewed](webhooks/webhooks.md#subscriptionrenewed)
+- [subscription.cancelled](webhooks/webhooks.md#subscriptioncancelled)
+- [order.paid](webhooks/webhooks.md#orderpaid)
