@@ -111,8 +111,10 @@ For `invoice` payments it will be sent as soon as the invoice has been created (
 
 ```json
 {
-  "status": 200,
-  "success": true,
+  "id": "114d8fd9-862a-4832-a8d1-422bf4a778a7",
+  "name": "order.paid",
+  "account": 1421,
+  "created_at": "2020-02-11T12:26:34+00:00",
   "data": {
     "id": 193468423,
     "customer_id": 449739128,
