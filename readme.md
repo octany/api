@@ -9,7 +9,7 @@ Where do I start?
 
 Want to get started with Widget integration?
 
-1. [Widget examples](#widget/examples.md)
+1. [Widget examples](widgets/examples.md)
 
 Want to get started with API integration? Here's a quick check list:
 
