@@ -71,6 +71,6 @@ Here is a list of all properties
 * `price-with-vat` Set this to true if you want to display price with VAT included, defaults to false (type="button" only)
 * `amount` Set a custom amount (type="button" only)
 * `first-name` Prefill first name
-* `first-name` Prefill last name
+* `last-name` Prefill last name
 * `email` Prefill email 
 * `company` Check 'pay as company' and prefill company name
