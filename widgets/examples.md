@@ -68,5 +68,9 @@ Here is a list of all properties
 * `abort-url` Customers are sent to this URL if they close Octany without making a purchase
 * `reference-id` A custom string which is sent back to your application when using Webhooks or an API endpoint, max 250 characters
 * `reference-name` Works exactly like reference-id, but the name is also visible in the Octany UI
-* `price-with-vat` Set this to true if you want to display price with VAT included, defaults to false
-* `amount` Set a custom amount, this only works for donations when used with type=button
+* `price-with-vat` Set this to true if you want to display price with VAT included, defaults to false (type="button" only)
+* `amount` Set a custom amount (type="button" only)
+* `first-name` Prefill first name
+* `first-name` Prefill last name
+* `email` Prefill email 
+* `company` Check 'pay as company' and prefill company name
