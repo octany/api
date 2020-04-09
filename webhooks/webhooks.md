@@ -33,6 +33,7 @@ This event is sent when a new subscription has been created in the system.
         "status": "active",
         "ends_at": null,
         "product": {
+            "id": 1225,
             "name": "Pro",
             "type": "month",
             "price": 34900,
@@ -135,6 +136,7 @@ For `invoice` payments it will be sent as soon as the invoice has been created (
         "price": 34900,
         "vat": 2500,
         "product": {
+          "id": 1225,
           "name": "Snowfire Website",
           "type": "month",
           "price": 34900,

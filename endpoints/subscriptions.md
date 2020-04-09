@@ -70,6 +70,7 @@ Get a subscription
       "type": "stripe"
     },
     "product": {
+      "id": 1225,
       "name": "Base",
       "type": "month",
       "price": 29900,

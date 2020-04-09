@@ -36,6 +36,7 @@ Get an order
         "price": 34900,
         "vat": 2500,
         "product": {
+          "id": 1225,
           "name": "Snowfire Website",
           "type": "month",
           "price": 34900,

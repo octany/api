@@ -73,4 +73,5 @@ Here is a list of all properties
 * `first-name` Prefill first name
 * `last-name` Prefill last name
 * `email` Prefill email 
+* `phone` Prefill phone number (Must be prefixed with tel:, example: `tel:0701234567`) and is only used for Swish payments
 * `company` Check 'pay as company' and prefill company name
