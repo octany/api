@@ -70,8 +70,13 @@ Here is a list of all properties
 * `reference-name` Works exactly like reference-id, but the name is also visible in the Octany UI
 * `price-with-vat` Set this to true if you want to display price with VAT included, defaults to false (type="button" only)
 * `amount` Set a custom amount (type="button" only)
-* `first-name` Prefill first name
-* `last-name` Prefill last name
-* `email` Prefill email 
+* `first-name`
+* `last-name`
+* `email` 
+* `line1` Prefill postal address line 1 
+* `line2`
+* `zip` 
+* `city`
+* `country` 2 letter country code, according to [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) 
 * `phone` Prefill phone number (Must be prefixed with tel:, example: `tel:0701234567`) and is only used for Swish payments
 * `company` Check 'pay as company' and prefill company name
