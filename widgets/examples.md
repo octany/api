@@ -80,3 +80,19 @@ Here is a list of all properties
 * `country` 2 letter country code, according to [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) 
 * `phone` Prefill phone number (Must be prefixed with tel:, example: `tel:0701234567`) and is only used for Swish payments
 * `company` Check 'pay as company' and prefill company name
+
+Success URL
+-----------
+
+It is possible to decorate the success url for recurring products, example:
+
+```
+https://www.example.com/thanks?first_name={firstName}&lastName={lastName}&product={product}&email={email}
+```
+
+###### Parameters
+
+* {firstName}
+* {lastName}
+* {email}
+* {product} – Product name
