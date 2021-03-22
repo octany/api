@@ -70,6 +70,7 @@ Here is a list of all properties
 * `reference-name` Works exactly like reference-id, but the name is also visible in the Octany UI
 * `price-with-vat` Set this to true if you want to display price with VAT included, defaults to false (type="button" only)
 * `amount` Set a custom amount (type="button" only)
+* `price-description` Replace the default pricing description ($100/month) in the modal with a custom text
 * `first-name`
 * `last-name`
 * `email` 
