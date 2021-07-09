@@ -97,3 +97,4 @@ https://www.example.com/thanks?first_name={firstName}&lastName={lastName}&produc
 * {lastName}
 * {email}
 * {product} – Product name
+* {subscriptionId}
