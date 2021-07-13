@@ -81,6 +81,7 @@ Here is a list of all properties
 * `country` 2 letter country code, according to [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) 
 * `phone` Prefill phone number (Must be prefixed with tel:, example: `tel:0701234567`) and is only used for Swish payments
 * `company` Check 'pay as company' and prefill company name
+* `party` Accepts `company`, `person` or `all` which shows the pay as company checkbox (default). Set this value to company to force everyone who pays to specify their company name
 
 Success URL
 -----------
