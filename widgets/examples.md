@@ -99,3 +99,4 @@ https://www.example.com/thanks?first_name={firstName}&lastName={lastName}&produc
 * {email}
 * {product} – Product name
 * {subscriptionId}
+* {customerId}
