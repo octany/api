@@ -100,3 +100,4 @@ https://www.example.com/thanks?first_name={firstName}&lastName={lastName}&produc
 * {product} – Product name
 * {subscriptionId}
 * {customerId}
+* {total} – Today's total excluding VAT in the smallest common currency unit (i.e cents/öre)
