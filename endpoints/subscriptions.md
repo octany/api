@@ -6,6 +6,7 @@ Endpoints:
 - [Get subscriptions](#get-subscriptions)
 - [Get a subscription](#get-a-subscription)
 - [Cancel a subscription](#cancel-a-subscription)
+- [Change product](#change-product)
 
 Get subscriptions
 -----------------
@@ -108,3 +109,11 @@ A cancelled subscription has a `null` value for `renews_at` and the `status: can
   }
 }
 ```
+
+Change product
+--------------
+
+* `POST /subscription/29281116/product?product=1234`
+
+This will change the subscription product and price to a product with an ID of `1234`. 
+Please note that you can't switch a recurring donation product.
