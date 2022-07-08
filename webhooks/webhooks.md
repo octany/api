@@ -13,6 +13,11 @@ Events:
 - [subscription.cancelled](#subscriptioncancelled)
 - [order.paid](#orderpaid)
 
+Security
+--------------------
+
+Each webhook we send contains a header called `Octany-Signature` which contains the hash of the payload. It's using [HMAC](https://en.wikipedia.org/wiki/HMAC) with a unique secret for your endpoint. You can match the payload with your secret against the signature in the header to validate the request.
+
 subscription.created
 --------------------
 
