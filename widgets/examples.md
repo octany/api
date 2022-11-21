@@ -22,6 +22,7 @@ This widget is for donations
 <div class="octany-wrapper">   
     <div class="octany-wrapper">   
         <octany-widget
+            version="2"
             url="https://app.octany.com"
             account-id="[ACCOUNT_ID]"
             product-id="[PRODUCT_ID_1]|[PRODUCT_ID_2]"
@@ -31,7 +32,7 @@ This widget is for donations
             locale="sv"
         ></octany-widget>
 
-        <link rel="stylesheet" href="https://app.octany.com/1427/checkout/appearance">
+        <link rel="stylesheet" href="https://app.octany.com/[ACCOUNT_ID]/checkout/appearance">
         <script src="https://app.octany.com/js/checkout.js"></script>
     </div>
 </div>
@@ -44,6 +45,7 @@ This widget works with subscriptions and donations
 
 ```html
 <octany-widget
+    version="2"
     url="https://app.octany.com"
     account-id="[ACCOUNT_ID]"
     product-id="[PRODUCT_ID]"
