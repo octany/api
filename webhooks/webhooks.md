@@ -109,7 +109,7 @@ Includes the exact same payload as `subscription.created`
 order.paid
 ----------
 
-This event is only sent for one time donation payments. 
+This event is sent for single and recurring payments made trough Octany. 
 The event will be sent immediately for `card` and `Swish` payments. 
 For `invoice` payments it will be sent as soon as the invoice has been created (usually within an hour)
 
