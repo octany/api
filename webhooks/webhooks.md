@@ -18,6 +18,14 @@ Security
 
 Each webhook we send contains a header called `Octany-Signature` which contains the hash of the payload. It's using [HMAC](https://en.wikipedia.org/wiki/HMAC) with a unique secret for your endpoint. You can match the payload with your secret against the signature in the header to validate the request.
 
+Customer vs Billing
+--------------------
+We've introduced a new way to interact with people and companies. Instead of the generic customer object, we now have separate company and person objects that are associated with each billing_method.
+
+We recommend storing customer data like name, email, and phone number from the data in `billing_method`.
+
+It's important to note that this update is 100% backward compatible. While the customer object is still around, it's marked as deprecated. For a smoother transition to newer API versions, we suggest not using the deprecated customer object.
+
 subscription.created
 --------------------
 
@@ -30,7 +38,7 @@ This event is sent when a new subscription has been created in the system.
     "id": "59958608-8e4d-4795-b7b6-91512359c935",
     "name": "subscription.created",
     "account": 1421,
-    "created_at": "2020-01-17T15:07:57+00:00",
+    "created_at": "2023-10-20T09:01:43+00:00",
     "data": {
         "id": 70212202,
         "vat": 2500,
@@ -49,35 +57,39 @@ This event is sent when a new subscription has been created in the system.
         "customer": {
             "id": 452512733,
             "name": "John Doe",
-            "type": "person",
-            "person": {
-                "first_name": "John",
-                "last_name": "Doe",
-                "email": "john@octany.com",
-                "phone": null,
-                "locale": "sv",
-                "created_at": "2020-01-17T13:35:10+00:00",
-                "updated_at": "2020-01-17T13:35:10+00:00"
-            },
-            "address": {
-                "line1": "Kungsgatan 25",
-                "line2": "",
-                "zip": "114 50",
-                "city": "Stockholm",
-                "country": "SE",
-                "created_at": "2020-01-17T13:35:14+00:00",
-                "updated_at": "2020-01-17T13:35:14+00:00"
-            },
-            "created_at": "2020-01-17T13:29:59+00:00",
-            "updated_at": "2020-01-17T13:30:09+00:00",
+            "type": "company",
+            "created_at": "2023-10-20T09:01:43+00:00",
+            "updated_at": "2023-10-20T09:01:43+00:00",
             "vat_number": null,
             "archived_at": null
         },
-        "renews_at": "2020-02-17T13:35:14+00:00",
+        "renews_at": "2023-10-20T09:01:43+00:00",
         "customer_id": 452512733,
         "billing_method": {
+            "name": "faktura",
             "type": "fortnox",
-            "email": "invoice@octany.com"
+            "email": "invoice@example.com",
+            "person": {
+                "email": "john@example.com",
+                "phone": false,
+                "locale": "sv",
+                "last_name": "Persson",
+                "first_name": "Peter",
+                "personal_identity_number": null
+            },
+            "address": {
+                "zip": "116 53",
+                "city": "Stockholm",
+                "line1": "Sveavägen 11",
+                "line2": null,
+                "country": "SE",
+                "created_at": "2023-10-20T09:01:43+00:00",
+                "updated_at": "2023-10-20T09:01:43+00:00"
+            },
+            "company": {
+                "name": "Example Company",
+                "vat_number": "SE556742219001"
+            }
         },
         "reference_id": null,
         "reference_name": null
@@ -120,7 +132,7 @@ For `invoice` payments it will be sent as soon as the invoice has been created (
   "id": "114d8fd9-862a-4832-a8d1-422bf4a778a7",
   "name": "order.paid",
   "account": 1421,
-  "created_at": "2020-02-11T12:26:34+00:00",
+  "created_at": "2023-10-20T09:01:43+00:00",
   "data": {
     "id": 193468423,
     "customer_id": 449739128,
@@ -131,8 +143,19 @@ For `invoice` payments it will be sent as soon as the invoice has been created (
     "reference_name": null,
     "state": "paid",
     "billing_method": {
-      "email": "jane@snowfire.net",
-      "type": "swish"
+      "name": "Swish",
+      "type": "swish",
+      "email": "jane@example.com",
+      "person": {
+          "email": "jane@example.com",
+          "phone": "46730401224",
+          "locale": "sv",
+          "last_name": "Doe",
+          "first_name": "Jane",
+          "personal_identity_number": null
+      },
+      "address": null,
+      "company": null
     },
     "items": [
       {
@@ -155,15 +178,7 @@ For `invoice` payments it will be sent as soon as the invoice has been created (
       "name": "Jane Doe",
       "type": "person",
       "vat_number": null,
-      "archived_at": null,
-      "person": {
-        "first_name": "Jane",
-        "last_name": "Doe",
-        "email": "jane@snowfire.net",
-        "phone": null,
-        "locale": "sv"
-      },
-      "address": null
+      "archived_at": null
     }
   }
 }
