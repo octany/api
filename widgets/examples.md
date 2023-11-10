@@ -80,10 +80,14 @@ Here is a list of all properties
 * `line2`
 * `zip` 
 * `city`
+* `personal-identity-number
 * `country` 2 letter country code, according to [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) 
 * `phone` Prefill phone number (Must be prefixed with tel:, example: `tel:0701234567`) and is only used for Swish payments
 * `company` Check 'pay as company' and prefill company name
 * `party` Accepts `company`, `person` or `all` which shows the pay as company checkbox (default). Set this value to company to force everyone who pays to specify their company name
+* `accepted-terms` Indicates that the user already has accepted terms in a previous step
+* `metadata` Save custom JSON data to the payment
+* `use-spar` Makes it possible to disable SPAR if it is enabled on the account
 
 Success URL
 -----------
