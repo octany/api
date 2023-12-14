@@ -16,6 +16,11 @@ Get subscriptions
 _Optional filters_
 
 * `reference_id` will only return subscriptions with a specific reference id
+* `email` will only return subscriptions with a specific contact email address
+
+###### Example request
+
+`/subscriptions?filter[email]=jane@octany.com`
 
 ###### Example JSON Response
 
